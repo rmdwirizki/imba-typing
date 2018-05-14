@@ -1,0 +1,23 @@
+// Config
+
+$app-primary-font   : 'Ubuntu', 'cursive';
+$app-primary-color  : #43C6AC;
+$app-secondary-color: #191654;
+$app-inverted-color : #ffffff;
+
+$app-navbar-height : 40px;
+
+@import "navbar.scss";
+@import "banner.scss";
+@import "arenas.scss";
+
+// App Shell
+
+body { margin: 0; }
+
+.App {
+  width : 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 3fr 1fr;
+}

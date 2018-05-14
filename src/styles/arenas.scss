@@ -1,0 +1,137 @@
+._app-arenas {
+  display: flex;
+  align-items: center;
+
+  .play.button {
+    font-family: $app-primary-font;
+    font-size: 2em;
+    padding: 20px 80px;
+    color: $app-inverted-color;
+    position: relative;
+    border: 3px solid;
+    border-color: rgba(255,255,255,.2);
+    transition: border .5s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      border-color: rgba(255,255,255,0);
+    }
+
+    /* Button hover effect */
+    /* https://codemyui.com/css-button-border-hover-effects/ */
+
+    &::before, &::after {
+      content:'';
+      width: 100%;
+      height:100%;
+      z-index: 3;
+      position: absolute;
+      top:0;
+      left:0;
+      box-sizing: border-box;
+      transform: scale(0);
+      transition: transform 0.5s;
+    }
+    &::before {
+      border-bottom: 3px solid $app-inverted-color;
+      border-left: 3px solid $app-inverted-color;
+      transform-origin: 100% 0%
+    }
+    &::after {
+      border-top: 3px solid $app-inverted-color;
+      border-right: 3px solid $app-inverted-color;
+      transform-origin: 0% 100%
+    }
+    &:hover::after, &:hover::before {
+      transform: scale(1)
+    }
+  }
+  
+  /* Typing Area */
+
+  .arena {
+    font-family: $app-primary-font;
+    font-size: 2em;
+    color: rgba(1,1,1,.3);
+    width: 100vw;
+    height: 100%;
+    display: none;
+    align-items: center;
+    white-space: nowrap;
+
+    &:hover {
+      cursor: text
+    }
+
+    &.is-playing {
+      display: inline-flex;
+
+      & + .block {
+        display: none;
+      }
+    }
+
+    & + .block {
+      background: $app-primary-color;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, $app-secondary-color, $app-primary-color);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, $app-secondary-color, $app-primary-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center
+    }
+
+    & > .block {
+      width: 50%;
+      overflow: hidden;
+    
+      &.right {
+        & .word {
+          margin-right: 5px;
+        }
+      }
+      &.left {
+        text-align: right;
+
+        // & .word:nth-last-child(2) + .word:empty {
+        //   margin-left: 5px;
+        // }
+        & .word:not(:last-child) {
+          margin-right: 5px;
+        }
+        & > .line {
+          float: right;
+        }
+        & .word.is-wrong {
+          color: $app-primary-color;
+          text-decoration: line-through;
+        }
+        & .word {
+          color: $app-secondary-color;
+        }
+      }
+    }
+
+    /* Highlight next word: looks like doesn't needed anymore */
+    /* 
+      .right.block .word:first-child {
+        background: #eee8aa;
+        padding: 5px 0px
+      } 
+    */
+    
+    /* Input */
+  
+    input {
+      font-size: 1em;
+      width  : 2px;
+      border : none;
+      outline: none;
+      color  : $app-secondary-color;
+      -webkit-text-fill-color: transparent;
+      background-color: $app-inverted-color;
+    }
+  }
+}

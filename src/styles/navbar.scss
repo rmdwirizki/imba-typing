@@ -1,0 +1,40 @@
+._app-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: $app-navbar-height;
+  padding: 20px;
+
+  background: $app-primary-color;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $app-secondary-color, $app-primary-color);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $app-secondary-color, $app-primary-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  opacity: 0.8;
+
+  a {
+    color: $app-inverted-color;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: $app-primary-font;
+  }
+  .locales {
+    &.is-playing {
+      display: none;
+    }
+    a {
+      &.is-active {
+        background: rgba(255,255,255,.4);
+        padding: 10px;
+        border-radius: 50%;
+      }
+      &.separator {
+        margin: 0px 10px;
+        opacity: .5;
+      }
+      &:not(.separator):hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

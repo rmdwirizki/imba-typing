@@ -1,0 +1,43 @@
+._app-banner {
+  background: $app-primary-color;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, $app-secondary-color, $app-primary-color);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, $app-secondary-color, $app-primary-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $app-primary-font;
+  color: $app-inverted-color;
+  text-transform: uppercase;
+
+  /* border-bottom: 3px solid $app-primary-color; */
+  .statistics {
+    display: flex;
+    flex-direction: row;
+
+    & > .item {
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  .countdown.is-hidden {
+    display: none;
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 2.75em;
+    margin-bottom: 20px;
+  }
+  .counter {
+    font-family: $app-primary-font;
+    font-size: 2.75em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .counter + .label {
+    font-size: 0.9em;
+  }
+}
