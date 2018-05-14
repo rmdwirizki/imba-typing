@@ -22,7 +22,7 @@ Then open `localhost:8080`
 
 ```
 npm install -g imba
-imbapack src/client.imba
+imbapack --watch src/client.imba
 ```
 
-It will output `dist/client.js`, then just open `dist/index.html` on a browser
+It will output `dist/client.js`, then just open `dist/index.html` directly on a browser
