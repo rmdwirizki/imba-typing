@@ -25,4 +25,4 @@ npm install -g imba
 imbapack src/client.imba
 ```
 
-It will output `dist/client.js`, then just open `index.html`
+It will output `dist/client.js`, then just open `dist/index.html` on a browser
