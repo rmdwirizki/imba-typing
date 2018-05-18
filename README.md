@@ -12,7 +12,7 @@ npm install
 
 # Run and Development
 
-## Using Imba Server
+## Using webpack-dev Server
 
 ```
 npm run dev
@@ -20,7 +20,7 @@ npm run dev
 
 Then open `localhost:8080`
 
-## Using Standalone
+## Using standalone
 
 ```
 npm install -g imba
