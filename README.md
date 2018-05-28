@@ -24,7 +24,8 @@ Then open `localhost:8080`
 
 ```
 npm install -g imba
-imbapack --watch src/client.imba
+npm run build 
+# or npm run watch
 ```
 
-It will output `dist/client.js`, then just open `dist/index.html` directly on a browser
+It will output `dist/client.js`, then just open `index.html` directly on a browser
