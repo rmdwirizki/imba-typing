@@ -46,7 +46,7 @@ export tag app-arenas
 		if lastChunk == '' || lastChunk:indexOf('.') != -1
 			urlChunks:pop()
 
-		const url = urlChunks:join('/') + '/data/words-' + data:options:language + '.json'
+		const url = urlChunks:join('/') + '/dist/data/words-' + data:options:language + '.json'
 
 		# Get json data
 

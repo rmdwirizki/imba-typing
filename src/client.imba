@@ -1,4 +1,4 @@
-import './styles/appStyles.scss';
+import './styles/appStyles.scss'
 
 import {app-navbar} from './components/navbar.imba'
 import {app-banner} from './components/banner.imba'
